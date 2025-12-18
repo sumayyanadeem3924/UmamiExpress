@@ -1,0 +1,32 @@
+name: UMAMIEXPRESS
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+# ... (your existing pubspec.yaml content above environment)
+
+environment:
+  sdk: ^3.9.2 # Ensure this is a modern SDK version
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # ⭐️ CRITICAL FIX: UPGRADE FIREBASE PACKAGES ⭐️
+  # These versions fix the web compatibility errors (PromiseJsImpl, etc.)
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0 # Keeping your currently resolved version or newer like 4.20.0
+  firebase_database: ^10.5.7
+  # Force the newer web adapter package version
+  firebase_auth_web: ^5.9.1
+  shared_preferences: ^2.2.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
